@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="./assets/logo.png" width="80"/>
+            </div>
+            <ul>
+                <li><i class="fas fa-home"></i><a href="./index.html">Dashboard</a></li>
+                <li class="active"><i class="fas fa-table"></i><a href="./tables.html">Tables</a></li>
+            </ul>
+        </nav>
+         <main class="main-content">
+            <header>
+                <form id="searchform">
+                    <input id="cityinput" type="text" placeholder="Ener the city.."/>
+                </form>
+                    <div class="account-btn">
+                        <img width="40" src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"/>
+                        <p>Account</p>
+                    </div>
+            </header>
+            <div class="widget-wrapper">
+                <div class="weather-widget left" id="weather-widget">
+                    <table id="forecast-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temperature (°C)</th>
+                                <th>Condition</th>
+                            </tr>
+                        </thead>
+                        <tbody id="forecast-body">
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <button class="prev">Previous</button>
+                        <button class="next">Next</button>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="chat-list">
+                        
+                    </div>
+                    <div class="typing-area">
+                      <form action="#" class="typing-form">
+                        <div class="input-wrapper">
+                          <input type="text" placeholder="Enter a prompt here" class="typing-input" required />
+                          <button type="submit" id="send-btn">Send</button>
+                        </div>
+                       
+                      </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- <script src="bot.js"></script> -->
+    <script src="app2.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="./assets/logo.png" width="80"/>
+            </div>
+            <ul>
+                <li class="active"><i class="fas fa-home"></i><a href="./index.html">Dashboard</a></li>
+                <li><i class="fas fa-table"></i><a href="./tables.html">Tables</a></li>
+            </ul>
+        </nav>
+         <main class="main-content">
+            <header>
+                <form id="searchform">
+                    <input id="cityinput" type="text" placeholder="Ener the city.."/>
+                    <button type="submit">Get Weather</button>
+                </form>
+                    <div class="account-btn">
+                        <img width="40" src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"/>
+                        <p>Account</p>
+                    </div>
+            </header>
+            <div class="weather-widget" id="weather-widget">
+                <h3>Weather in <span id="city-name">Loading...</span></h3>
+                <div class="weather-condition-wrapper">
+                    <img id="weather-condition-img" src="" width="40"/>
+                    <p id="weather-condition">Loading...</p>
+                </div>
+                <div class="weather-conditions">
+                    <div class="weather-condition-wrapper">
+
+                        <span style="margin-right: 10px;">Temperature</span>
+                        <span id="temperature">-</span>
+                    </div>
+                    <div class="weather-condition-wrapper">
+
+                        <span style="margin-right: 10px;">Humidity</span>
+
+                        <span id="humidity">-</span>
+                    </div>
+                    <div class="weather-condition-wrapper">
+
+                        <span style="margin-right: 10px;">Wind Speed</span>
+
+                        <span id="wind">-</span>
+                    </div>
+                </div>
+                <div class="charts">
+                    
+                    <canvas id="barChart"></canvas>
+                    <canvas id="doughnutChart"></canvas>
+                    <canvas id="lineChart"></canvas>
+                </div>
+
+                 <table id="forecast-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Temperature (°C)</th>
+                            <th>Condition</th>
+                        </tr>
+                    </thead>
+                    <tbody id="forecast-body">
+                    </tbody>
+                </table>
+            
+            
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
